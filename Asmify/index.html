@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asmify</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar flex">
+      <div class="leftnav flex">
+        <div class="flex logo">
+          <img src="logo.png" alt="logo" width="34px" />
+          <p class="logoName">Asmify</p>
+        </div>
+        <div class="white library flex point"><i class="fa-solid fa-book"></i></div>
+
+        <div class="home flex point"><i class="white fa-solid fa-house"></i></div>
+        <div id="search" class="search flex">
+          <i id="searchBar" class="fa-solid fa-magnifying-glass white  point"></i>
+          <div class="flex">
+            <input
+              type="text"
+              class="searcher"
+              placeholder="What do you want to play?"
+            />
+            <hr class="vertical-line" />
+            <img src="browse.svg" alt="browse" class="white"/>
+          </div>
+        </div>
+      </div>
+      <div class="rightnav flex">
+        <p class="hb">Premium</p>
+        <p class="hb">Support</p>
+        <p class="hb">Download</p>
+        <hr class="hb vertical-line" />
+        <div class="download flex">
+          <i class="fa-solid fa-download white"></i>
+          <p>Install App</p>
+        </div>
+        <p class="signup">SignUp</p>
+
+        <button class="login">Login</button>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+          <div class="dropdown">
+            <p class="">Premium</p>
+            <p class="">Support</p>
+            <p class="">Download</p>
+            <p class="mobile">
+              Install App <i class="fa-solid fa-download white"></i>
+            </p>
+            <p class="mobile">SignUp</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body flex">
+      <div class="left">
+        <div class="head flex">
+          <p>Your library</p>
+          <div class="flex closeAdd">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-xmark" id="closeLeft"></i>
+          </div>
+        </div>
+        <div onclick="listingPlaylists()" class="goLibary flex  point">
+          <p>Go to My library</p>
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+        <div class="boxCon flex">
+          <div class="box">
+            <h3>Create your first playlist</h3>
+            <p>It's easy we'll help you first</p>
+            <button class="cBtn point">Create</button>
+          </div>
+          <div class="box">
+            <h3>Create your first playlist</h3>
+            <p>It's easy we'll help you first</p>
+            <button class="cBtn point">Create</button>
+          </div>
+        </div>
+        <div class="links flex">
+          <a href="http://">Legal</a>
+          <a href="http://">Safety & Privacy center</a>
+          <a href="http://">Privacy policy</a>
+          <a href="http://">Cookies</a>
+          <a href="http://">About Ads</a>
+          <a href="http://">Accessibility</a>
+        </div>
+        <div class="lang">
+          <button class="flex"><img src="lang.svg" alt="lang" />English</button>
+        </div>
+      </div>
+      <div class="right">
+        <div id="rightContents" >
+          <!-- Trending songs  -->
+          <div class="trendingsongs section">
+            <div class="trendHead flex">
+              <h1 class="head">Trending Songs</h1>
+              <p class="showall" onclick="mywrap('heresongs')" id="showAllTS">
+                Show All
+              </p>
+            </div>
+            <div id="heresongs" class="songCon flex"></div>
+          </div>
+          <!-- Popular artists -->
+          <div class="popArtists section">
+            <div class="trendHead flex">
+              <h1 class="head">Popular artists</h1>
+              <p class="showall" onclick="mywrap('hereartist')" id="showAllPA">
+                Show All
+              </p>
+            </div>
+
+            <div id="hereartist" class="songCon flex">
+            </div>
+          </div>
+          <!-- Popular Albums and single -->
+          <div class="trendingsongs section">
+            <div class="trendHead flex">
+              <h1 class="head">Popular Albums and single</h1>
+              <p class="showall" onclick="mywrap('hereals')" id="showAllTS">
+                Show All
+              </p>
+            </div>
+            <div id="hereals" class="songCon flex">
+              <div class="song flex">
+                <div class="thumbnail">
+                  <div class="forhover">
+                    <div class="playbtn flex"><i class="fa-solid fa-play"></i></div>
+                  </div>
+                </div>
+                <p>Song Name</p>
+                <p>artist</p>
+              </div>
+            </div>
+          </div>
+          <!-- Popular Radio -->
+          <div class="trendingsongs section">
+            <div class="trendHead flex">
+              <h1 class="head">Popular Radio</h1>
+              <p class="showall" onclick="mywrap('hereradio')" id="showAllTS">
+                Show All
+              </p>
+            </div>
+            <div id="hereradio" class="songCon flex">
+              <div class="song flex">
+                <div class="thumbnail">
+                  
+                </div>
+                <div class="forhover">
+                    <div class="playbtn flex"><i class="fa-solid fa-play"></i></div>
+                  </div>
+                <p>Song Name</p>
+                <p>artist</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- controls and audio box -->
+          <div class="audioBox flex">
+            <div class="abox flex">
+              <marquee direction="left" scrollamount="2" scrolldelay="10" id="name">song name - artist</marquee>
+              <div class="controls flex">
+                <i id="previous" class="fa-solid fa-backward point"></i>
+                <div id="ctrl" class="flex point">
+                  <i id="play" class="fa-solid fa-play"></i>
+                  <i id="pause" class="fa-solid fa-pause"></i>
+                </div>
+                <i id="next" class="fa-solid fa-forward point"></i>
+              </div>
+              <div class="volume">
+                <div class="volPosi vol">
+                  <input type="range" class="volumeBar point range" name="volume" id="" >
+                  <div class="voler">
+                  <i class="fa-solid fa-volume-high yesVolume white"></i>
+                  <i class="fa-solid fa-volume-xmark noVolume white"></i>
+                  </div>
+                </div>
+
+              </div>
+              <div class="timings">0:00 / 0:00</div>
+              <div class="progressBar">
+                <div class="circle"></div>
+                <div class="progress"></div>
+              </div>
+            </div>
+          </div>
+        <!-- display all my library folders -->
+        <div class="trendingsongs section myLibrary">
+          <div class="trendHead flex">
+            <h1 class="head">My Playlists</h1>
+          </div>
+          <div id="herePlaylists" class="songCon flex toWrap"></div>
+        </div>
+        <!-- display the songs of the folder clicekd on -->
+        <div class="trendingsongs section myLibrarySongs">
+          <div class="trendHead flex">
+            <h1 class="head folerName"></h1>
+            <p class="showall" id="backToMyPlaylists">Back</p>
+          </div>
+          <div id="hereMySongs" class="songCon flex toWrap"></div>
+        </div>
+
+
+
+        
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
